@@ -10,7 +10,7 @@
 <!-- Tamaño de la pantalla -->
 <meta name="viewport" content="width=device-width">
 <!-- titulo de la pestaña -->
-<title>Eliminar Proveedor</title>
+<title>Actualizar proveedor</title>
 <!-- bootstrap-->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -62,36 +62,58 @@
 
 	<div style="padding-left: 5px">
 		<h1>
-			<i class="fas fa-skull-crossbones"></i> Datos del proveedor a eliminar
+			<i class="fas fa-sync"></i> Datos a actualizar del proveedor
 		</h1>
 		<div class="container">
 
 
 			<div id="error" class="alert alert-danger visually-hidden"
-				role="alert">Error al eliminar el proveedor, verifique que 
-				exista un proveedor con el nit y nombre dados</div>
+				role="alert">Error al actualizar el proveedor, verifique que el nit y nombre dados sean validos</div>
 
 			<div id="correcto" class="alert alert-success visually-hidden"
-				role="alert">Proveedor eliminado con exito</div>
+				role="alert">proveedor actualizado con exito</div>
 
 			<form id="form1">
-			
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon1">Nit</span> <input
+					<span class="input-group-text" id="basic-addon1">Ciudad</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte nit aqui..."
-						aria-describedby="basic-addon1" required id="nit_proveedor">
+						placeholder="Inserte ciudad aqui..."
+						aria-describedby="basic-addon1" required id="ciudad_proveedor">
 				</div>
 
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon2">Direccion</span> <input
+						type="text" class="form-control"
+						placeholder="Inserte direccion aqui..."
+						aria-describedby="basic-addon2" required id="direccion_proveedor">
+				</div>
+
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon3">Nit</span>
+					<input type="text" class="form-control"
+						placeholder="Inserte nit aqui..."
+						aria-describedby="basic-addon3" required id="nit_proveedor">
+				</div>
+
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon4">nombre_proveedor</span> <input
+						type="text" class="form-control"
+						placeholder="Inserte nombre aqui..."
+						aria-describedby="basic-addon4" required id="nombre_proveedor">
+				</div>
+
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="basic-addon5">Telefono</span> <input
+						type="text" class="form-control"
+						placeholder="Inserte telefono aqui..."
+						aria-describedby="basic-addon5" required id="telefono_proveedor">
+				</div>
 			</form>
 
-			<button type="button" class="btn btn-danger" onclick="eliminar()">
-				<i class="fas fa-skull-crossbones"></i> Eliminar proveedor
+			<button type="button" class="btn btn-warning" onclick="actualizar()">
+				<i class="fas fa-edit"></i> Actualizar proveedor
 			</button>
-			
-			<br>
-			<br>
-			<br>
+
 			<h1>
 				<i class="fas fa-cogs"></i> Operaciones
 			</h1>
@@ -126,13 +148,14 @@
 		<div class="row justify-content-between">
 			<div class="col-4">
 				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por miyer gonzalez <i
+					Diseñado y programado por Miyer Gonzalez <i
 					class="fas fa-code-branch"></i></a>
 			</div>
 		</div>
 	</nav>
 	<script>
-		function eliminar() {
+		function actualizar() {
+			var x = document.getElementById("nombre_proveedor").value;
 			var y = document.getElementById("nit_proveedor").value;
 			var req = new XMLHttpRequest();
 			var coincidencia = false;
@@ -144,39 +167,59 @@
 			console.log(JSON.parse(req.responseText));
 
 			for (i = 0; i < proveedores.length; i++) {
-				
+				console.log(proveedores[i].proveedor);
 				console.log(proveedores[i].nit_proveedor);
+				if (proveedores[i].proveedor == x) {
+					console.log(proveedores[i].proveedor + " " + x);
+					coincidencia = true
+					break;
+				}
+
 				if (proveedores[i].nit_proveedor == y) {
 					console.log(proveedores[i].nit_proveedor + " " + y);
-					coincidencia = true;
+					coincidencia = true
 					break;
 				}
 			}
 			console.log(coincidencia);
 
 			if (coincidencia != false) {
-				var nit=document.getElementById("nit_proveedor").value;
-				
+				var formData = new FormData();
+				formData.append("ciudad_proveedor", document
+						.getElementById("ciudad_proveedor").value);
+				formData.append("direccion_proveedor", document
+						.getElementById("direccion_proveedor").value);
+				formData.append("nit_proveedor", document
+						.getElementById("nit_proveedor").value);
+				formData.append("nombre_proveedor",
+						document.getElementById("nombre_proveedor").value);
+				formData.append("telefono_proveedor",
+						document.getElementById("telefono_proveedor").value);
 				var xhr = new XMLHttpRequest();
-				xhr.open("DELETE", "http://localhost:8080/eliminarproveedor?nit_proveedor="+nit);
-				
+				xhr.open("PUT", "http://localhost:8080/actualizarproveedor");
+
 				var element = document.getElementById("error");
 				element.classList.add("visually-hidden");
-				
 				var element2 = document.getElementById("correcto");
 				element2.classList.remove("visually-hidden");
 
+				document.getElementById("ciudad_proveedor").value = "";
+				document.getElementById("direccion_proveedor").value = "";
 				document.getElementById("nit_proveedor").value = "";
-				xhr.send();
+				document.getElementById("nombre_proveedor").value = "";
+				document.getElementById("telefono_proveedor").value = "";
+				xhr.send(formData);
 
 			} else {
 				var element = document.getElementById("error");
 				element.classList.remove("visually-hidden");
-				
 				var element2 = document.getElementById("correcto");
 				element2.classList.add("visually-hidden");
-				
-				document.getElementById("nit_proveedor").value = "";;
+				document.getElementById("ciudad_proveedor").value = "";
+				document.getElementById("direccion_proveedor").value = "";
+				document.getElementById("nit_proveedor").value = "";
+				document.getElementById("nombre_proveedor").value = "";
+				document.getElementById("telefono_proveedor").value = "";
 			}
 		}
 	</script>

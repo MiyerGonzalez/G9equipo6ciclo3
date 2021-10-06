@@ -27,9 +27,9 @@ public class ProveedorController {
 	}
 
 	@GetMapping("/consultarproveedor")
-	public ArrayList<ProveedorVO> consultarProveedor(Integer nit) {
+	public ArrayList<ProveedorVO> consultarProveedor(Integer nit_proveedor) {
 		ProveedorDAO Dao = new ProveedorDAO();
-		return Dao.consultarProveedor(nit);
+		return Dao.consultarProveedor(nit_proveedor);
 	}
 
 	@GetMapping("/listarproveedores")
@@ -39,9 +39,9 @@ public class ProveedorController {
 	}
 	
 	@DeleteMapping("/eliminarproveedor")
-	public void eliminarProveedor(Integer nit) {
+	public void eliminarProveedor(Integer nit_proveedor) {
 		ProveedorDAO Dao = new ProveedorDAO();
-		Dao.eliminarProveedor(nit);
+		Dao.eliminarProveedor(nit_proveedor);
 	}
 	
 	@PutMapping("/actualizarproveedor")

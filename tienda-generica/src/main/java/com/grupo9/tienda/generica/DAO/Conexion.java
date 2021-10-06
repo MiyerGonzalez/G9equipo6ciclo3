@@ -8,13 +8,13 @@ import java.sql.*;
 public class Conexion {
 	
 	/** Parametros de conexion */
-	static String nombre_base_datos = "g9e6";
+	static String nombre_base_datos = "tiendavirtual";
 	//root
-	static String usuariobd = "admin";
+	static String usuariobd = "root";
 	//mintic
-	static String clavebd = "minticroca";
+	static String clavebd = "mintic";
 	//127.0.0.1 == localhost
-	static String url = "jdbc:mysql://tiendasgenericasdr-g9-g38-53.czo3ixoe3xoe.us-east-1.rds.amazonaws.com/" + nombre_base_datos;
+	static String url = "jdbc:mysql://127.0.0.1/" + nombre_base_datos;
 		
 	//objeto sin inicializar de la conexión
 	Connection connection = null;

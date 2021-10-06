@@ -78,8 +78,8 @@
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon4">Proveedor a buscar</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte nombre aqui..."
-						aria-describedby="basic-addon4" required id="nombre_proveedorsearch" >
+						placeholder="Inserte nit aqui..."
+						aria-describedby="basic-addon4" required id="usersearch" >
 				</div>
 				<br>
 				<br>
@@ -171,8 +171,8 @@
 				
 				var req = new XMLHttpRequest();
 				var coincidencia = false;
-				var user=   document.getElementById("nombre_proveedorsearch").value;
-				req.open('GET', 'http://localhost:8080/consultarproveedor?proveedor='+nombre_proveedor, false);
+				var user=   document.getElementById("usersearch").value;
+				req.open('GET', 'http://localhost:8080/consultarproveedor?nit_proveedor='+user, false);
 				req.send(null);
 				var proveedor = null;
 				if (req.status == 200)
@@ -196,7 +196,7 @@
 				document.getElementById("nombre_proveedor").value = proveedor[0].nombre_proveedor;
 				document.getElementById("telefono_proveedor").value = proveedor[0].telefono_proveedor;
 				
-				document.getElementById("nombre_proveedorsearch").value = "";
+				document.getElementById("usersearch").value = "";
 			
 
 			} else {
