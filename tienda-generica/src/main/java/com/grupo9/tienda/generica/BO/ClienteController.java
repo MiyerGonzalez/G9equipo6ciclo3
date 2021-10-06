@@ -26,9 +26,9 @@ public class ClienteController {
 	}
 
 	@GetMapping("/consultarcliente")
-	public ArrayList<ClienteVO> consultarClientes(String cliente) {
+	public ArrayList<ClienteVO> consultarClientes(String cedula_cliente) {
 		ClienteDAO Dao = new ClienteDAO();
-		return Dao.consultarCliente(cliente);
+		return Dao.consultarCliente(cedula_cliente);
 	}
 
 	@GetMapping("/listaclientes")

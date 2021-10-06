@@ -65,7 +65,7 @@
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand links" href="index.html"><i
-				class="fas fa-fish"></i>Tienda Los Tiburones</a>
+				class="fas fa-fish"></i>Tienda Genérica</a>
 		</div>
 	</nav>
 
@@ -74,11 +74,11 @@
 		<div class="container">
 			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-users"></i> Usuarios</a> 
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listaclientes.jsp">
 			<i class="fas fa-address-book"></i> Clientes</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listarproveedores.jsp">
 			<i class="fas fa-truck"></i> Proveedores</a>
-			<a class="navbar-brand links" href="listausuarios.jsp">
+			<a class="navbar-brand links" href="listaproductos.jsp">
 			<i class="fas fa-apple-alt"></i> Productos</a>
 			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-money-check-alt"></i> Ventas</a>
@@ -108,13 +108,13 @@
 				<div class="row">
 					<button type="button" class="btn btn-success" onclick="window.location.href='/insertarusuario.jsp'">
 					<i class="fas fa-plus-circle"></i> Agregar usuario</button>
-					<button type="button" class="btn btn-danger">
+					<button type="button" class="btn btn-danger" onclick="window.location.href='/eliminarusuario.jsp'">
 					<i class="fas fa-trash"></i> Eliminar usuario</button>
-					<button type="button" class="btn btn-warning">
+					<button type="button" class="btn btn-warning" onclick="window.location.href='/actualizarusuario.jsp'">
 					<i class="fas fa-pen-alt"></i> Actualizar usuario</button>
-					<button type="button" class="btn btn-primary">
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/buscarusuario.jsp'">
 					<i class="fas fa-search"></i> Buscar un usuario</button>
-					<button type="button" class="btn btn-primary">
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/listausuarios.jsp'">
 					<i class="fas fa-search"></i> Listar todos los usuarios</button>
 				</div>
 			</div>
@@ -125,7 +125,7 @@
 		<div class="row justify-content-between">
 			<div class="col-4">
 				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por Diego Rodriguez <i
+					Diseñado y programado por Scrum 6 Grupo 9 <i
 					class="fas fa-code-branch"></i></a>
 			</div>
 		</div>

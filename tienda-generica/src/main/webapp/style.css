@@ -23,3 +23,9 @@
 	background-color: white;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  background: url("fondo2.png") no-repeat right top;
+  font-family: sans-serif;
+}

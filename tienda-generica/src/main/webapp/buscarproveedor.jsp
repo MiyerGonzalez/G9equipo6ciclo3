@@ -37,26 +37,25 @@
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand links" href="index.html"><i
-				class="fas fa-fish"></i>Tienda generica</a>
+				class="fas fa-fish"></i>Tienda Generica</a>
 		</div>
 	</nav>
 
 	<!-- Navbar modulos-->
 	<nav class="navbar navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand links" href="listarproveedores.jsp"> <i
-				class="fas fa-users"></i> Usuarios
-			</a> <a class="navbar-brand links" href="listarproveedore.jsp"> <i
-				class="fas fa-address-book"></i> Clientes
-			</a> <a class="navbar-brand links" href="listarproveedore.jsp"> <i
-				class="fas fa-truck"></i> Proveedores
-			</a> <a class="navbar-brand links" href="listarproveedore.jsp"> <i
-				class="fas fa-apple-alt"></i> Productos
-			</a> <a class="navbar-brand links" href="listarproveedore.jsp"> <i
-				class="fas fa-money-check-alt"></i> Ventas
-			</a> <a class="navbar-brand links" href="listarproveedore.jsp"> <i
-				class="fas fa-clipboard-list"></i> Reportes
-			</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-users"></i> Usuarios</a> 
+			<a class="navbar-brand links" href="listaclientes.jsp">
+			<i class="fas fa-address-book"></i> Clientes</a>
+			<a class="navbar-brand links" href="listarproveedores.jsp">
+			<i class="fas fa-truck"></i> Proveedores</a>
+			<a class="navbar-brand links" href="listaproductos.jsp">
+			<i class="fas fa-apple-alt"></i> Productos</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-money-check-alt"></i> Ventas</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-clipboard-list"></i> Reportes</a>
 		</div>
 	</nav>
 
@@ -125,41 +124,27 @@
 			<br>
 			<br>
 
-			<h1>
-				<i class="fas fa-cogs"></i> Operaciones
-			</h1>
+		<h1><i class="fas fa-cogs"></i> Operaciones</h1>
 			<div class="container">
 				<div class="row">
-					<button type="button" class="btn btn-success"
-						onclick="window.location.href='/insertarproveedor.jsp'">
-						<i class="fas fa-plus-circle"></i> Agregar proveedor
-					</button>
-					<button type="button" class="btn btn-danger"
-						onclick="window.location.href='/eliminarproveedor.jsp'">
-						<i class="fas fa-trash"></i> Eliminar proveedor
-					</button>
-					<button type="button" class="btn btn-warning"
-						onclick="window.location.href='/actualizarproveedor.jsp'">
-						<i class="fas fa-pen-alt"></i> Actualizar proveedor
-					</button>
-					<button type="button" class="btn btn-primary"
-						onclick="window.location.href='/buscarproveedor.jsp'">
-						<i class="fas fa-search"></i> Buscar un proveedor
-					</button>
-					<button type="button" class="btn btn-primary"
-						onclick="window.location.href='/listarproveedores.jsp'">
-						<i class="fas fa-search"></i> Listar todos los proveedores
-					</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='/insertarproveedor.jsp'">
+					<i class="fas fa-plus-circle"></i> Agregar proveedor</button>
+					<button type="button" class="btn btn-danger" onclick="window.location.href='/eliminarproveedor.jsp'">
+					<i class="fas fa-trash"></i> Eliminar proveedor</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='/actualizarproveedor.jsp'">
+					<i class="fas fa-pen-alt"></i> Actualizar proveedor</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/buscarproveedor.jsp'">
+					<i class="fas fa-search"></i> Buscar un proveedor</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/listarproveedores.jsp'">
+					<i class="fas fa-search"></i> Listar todos los proveedores</button>
 				</div>
 			</div>
-		</div>
-
 	</div>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">
 				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por Miyer Gonzalez <i
+					Diseñado y programado por Scrum 6 Grupo 9 <i
 					class="fas fa-code-branch"></i></a>
 			</div>
 		</div>

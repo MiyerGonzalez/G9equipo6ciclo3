@@ -67,24 +67,24 @@
 	<nav class="navbar navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand links" href="index.html"><i
-				class="fas fa-fish"></i>Tienda generica</a>
+				class="fas fa-fish"></i>Tienda Generica</a>
 		</div>
 	</nav>
 
-	<!-- Navbar modulos-->
+<!-- Navbar modulos-->
 	<nav class="navbar navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand links" href="listaproductos.jsp">
+			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-users"></i> Usuarios</a> 
-			<a class="navbar-brand links" href="listaproductos.jsp">
+			<a class="navbar-brand links" href="listaclientes.jsp">
 			<i class="fas fa-address-book"></i> Clientes</a>
-			<a class="navbar-brand links" href="listaproductos.jsp">
+			<a class="navbar-brand links" href="listarproveedores.jsp">
 			<i class="fas fa-truck"></i> Proveedores</a>
 			<a class="navbar-brand links" href="listaproductos.jsp">
 			<i class="fas fa-apple-alt"></i> Productos</a>
-			<a class="navbar-brand links" href="listauproductos.jsp">
+			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-money-check-alt"></i> Ventas</a>
-			<a class="navbar-brand links" href="listaproductos.jsp">
+			<a class="navbar-brand links" href="listausuarios.jsp">
 			<i class="fas fa-clipboard-list"></i> Reportes</a>
 		</div>
 	</nav>
@@ -127,7 +127,7 @@
 		<div class="row justify-content-between">
 			<div class="col-4">
 				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por Miyer Gonzalez <i
+					Diseñado y programado por Scrum 6 Grupo 9 <i
 					class="fas fa-code-branch"></i></a>
 			</div>
 		</div>
