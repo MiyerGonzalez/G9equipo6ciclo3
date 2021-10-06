@@ -41,22 +41,21 @@
 		</div>
 	</nav>
 
-	<!-- Navbar modulos-->
+<!-- Navbar modulos-->
 	<nav class="navbar navbar-dark bg-primary">
 		<div class="container">
-			<a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-users"></i> Usuarios
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-address-book"></i> Clientes
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-truck"></i> Proveedores
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-apple-alt"></i> Productos
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-money-check-alt"></i> Ventas
-			</a> <a class="navbar-brand links" href="listaclientes.jsp"> <i
-				class="fas fa-clipboard-list"></i> Reportes
-			</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-users"></i> Usuarios</a> 
+			<a class="navbar-brand links" href="listaclientes.jsp">
+			<i class="fas fa-address-book"></i> Clientes</a>
+			<a class="navbar-brand links" href="listarproveedores.jsp">
+			<i class="fas fa-truck"></i> Proveedores</a>
+			<a class="navbar-brand links" href="listaproductos.jsp">
+			<i class="fas fa-apple-alt"></i> Productos</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-money-check-alt"></i> Ventas</a>
+			<a class="navbar-brand links" href="listausuarios.jsp">
+			<i class="fas fa-clipboard-list"></i> Reportes</a>
 		</div>
 	</nav>
 
@@ -75,39 +74,35 @@
 
 			<form id="form1">
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon3">Cliente a buscar</span> <input
+					<span class="input-group-text" id="basic-addon3">Cedula cliente</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte nombre aqui..."
-						aria-describedby="basic-addon1" required id="nombre_cliente">
+						placeholder="Inserte cedula cliente aqui..."
+						aria-describedby="basic-addon1" required id="usersearch">
 				</div>
 				<br>
 				<br>
-				<br>
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon2">Cedula</span> <input
+					<span class="input-group-text" id="basic-addon2">Nombre</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte direccion aqui..."
-						aria-describedby="basic-addon2" required id="cedula_cliente">
+						aria-describedby="basic-addon2" required id="nombre_cliente">
 				</div>
 
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon3">Email</span>
 					<input type="text" class="form-control"
-						placeholder="Inserte email aqui..."
 						aria-describedby="basic-addon3" required id="email_cliente">
 				</div>
 
 				<div class="input-group mb-3">
-					<span class="input-group-text" id="basic-addon4">Nombrecompleto</span> <input
+					<span class="input-group-text" id="basic-addon4">Dirección</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte nombre completo aqui..."
-						aria-describedby="basic-addon4" required id="nombre_cliente">
+						aria-describedby="basic-addon4" required id="direccion_cliente">
 				</div>
 
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon5">Telefono</span> <input
 						type="text" class="form-control"
-						placeholder="Inserte telefono aqui..."
+						
 						aria-describedby="basic-addon5" required id="telefono_cliente">
 				</div>
 
@@ -125,39 +120,27 @@
 			<br>
 			<br>
 
-			<h1>
-				<i class="fas fa-cogs"></i> Operaciones
-			</h1>
+		<h1><i class="fas fa-cogs"></i> Operaciones</h1>
 			<div class="container">
 				<div class="row">
-					<button type="button" class="btn btn-success"
-						onclick="window.location.href='/buscarcliente.jsp'">
-						<i class="fas fa-plus-circle"></i> Agregar cliente
-					</button>
-					<button type="button" class="btn btn-danger">
-						<i class="fas fa-trash"></i> Eliminar cliente
-					</button>
-					<button type="button" class="btn btn-warning">
-						<i class="fas fa-pen-alt"></i> Actualizar cliente
-					</button>
-					<button type="button" class="btn btn-primary">
-						<i class="fas fa-search"></i> Buscar un cliente
-					</button>
-					<button type="button" class="btn btn-primary"
-					onclick="window.location.href='/listaclientes.jsp'">
-						<i class="fas fa-search"></i> Listar todos los clientes
-					</button>
+					<button type="button" class="btn btn-success" onclick="window.location.href='/insertarcliente.jsp'">
+					<i class="fas fa-plus-circle"></i> Agregar cliente</button>
+					<button type="button" class="btn btn-danger" onclick="window.location.href='/eliminarcliente.jsp'">
+					<i class="fas fa-trash"></i> Eliminar cliente</button>
+					<button type="button" class="btn btn-warning" onclick="window.location.href='/actualizarcliente.jsp'">
+					<i class="fas fa-pen-alt"></i> Actualizar cliente</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/buscarcliente.jsp'">
+					<i class="fas fa-search"></i> Buscar un cliente</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/listaclientes.jsp'">
+					<i class="fas fa-search"></i> Listar todos los clientes</button>
 				</div>
-
 			</div>
-		</div>
-
 	</div>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="row justify-content-between">
 			<div class="col-4">
 				<a class="navbar-brand links" href="#"><i class="fas fa-code"></i>
-					Diseñado y programado por miyer gonzalez <i
+					Diseñado y programado por Scrum 6 Grupo 9 <i
 					class="fas fa-code-branch"></i></a>
 			</div>
 		</div>
@@ -165,32 +148,31 @@
 	<script>
 		function enviar() {
 			
-			var req = new XMLHttpRequest();
-			var coincidencia = false;
-			var user=   document.getElementById("nombre_cliente").value;
-			req.open('GET', 'http://localhost:8080/consultarclientes?cliente='+user, false);
-			req.send(null);
-			var clientes=null;
-			if (req.status == 200)
-				clientes=JSON.parse(req.responseText);
-			  	console.log(JSON.parse(req.responseText));
+				var req = new XMLHttpRequest();
+				var coincidencia = false;
+				var user=   document.getElementById("usersearch").value;
+				req.open('GET', 'http://localhost:8080/consultarcliente?cedula_cliente='+user, false);
+				req.send(null);
+				var clientes=null;
+				if (req.status == 200)
+					clientes=JSON.parse(req.responseText);
+				console.log(JSON.parse(req.responseText));
 			  	
-			  	var element = document.getElementById("error");
+				var element = document.getElementById("error");
 				element.classList.add("visually-hidden");
 				var element2 = document.getElementById("correcto");
 				element2.classList.remove("visually-hidden");
-			}
-			console.log(cliente.toString());
-			
-			if (cliente.toString()!=""){
-				var formData = new FormData();
-				document.getElementById("cedula_cliente").value = cliente[0].cedula_cliente;
-				document.getElementById("direccion_cliente").value = cliente[0].direccion_cliente;
-				document.getElementById("email_cliente").value = cliente[0].email_cliente;
-				document.getElementById("nombre_cliente").value = cliente[0].nombre_cliente;
-				document.getElementById("telefono_cliente").value = cliente[0].telefono_cliente;
 				
-				document.getElementById("nombre_cliente").value = "";
+				console.log(clientes.toString());
+			
+			if (clientes.toString()!=""){
+				var formData = new FormData();
+				document.getElementById("nombre_cliente").value = clientes[0].nombre_cliente;
+				document.getElementById("direccion_cliente").value = clientes[0].direccion_cliente;
+				document.getElementById("email_cliente").value = clientes[0].email_cliente;
+				document.getElementById("telefono_cliente").value = clientes[0].telefono_cliente;
+				
+				document.getElementById("usersearch").value = "";
 	 			
 				
 			
@@ -200,7 +182,7 @@
 				element.classList.remove("visually-hidden");
 				var element2 = document.getElementById("correcto");
 				element2.classList.add("visually-hidden");
-				document.getElementById("cedula_cliente").value = "";
+				document.getElementById("usersearch").value = "";
 				document.getElementById("direccion_cliente").value = "";
 				document.getElementById("email_cliente").value = "";
 				document.getElementById("nombre_cliente").value = "";
