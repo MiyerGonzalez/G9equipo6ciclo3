@@ -1,33 +1,75 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title> Form Login | user </title>
-   <link rel="stylesheet" href="css/style.css">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
+<!doctype html>
+<html lang="en">
 
-    <div class="login-box">
-     <img class="avatar"    src="https://cdn.pixabay.com/photo/2020/10/09/06/37/mario-kart-5639669_960_720.png">
-    <h1>Ingresar</h1>
-   <form >
-   <label for="username">Usuario</label>
- <input type="text" placeholder="Enter Username" >
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.88.1">
+	<title>TIENDA LOS TIBURONES</title>
 
- <label for="password">Contraseña</i></label>
- <input type="password" placeholder="Enter password" >
+	<link rel="shortcut icon" href="Tiburon.png" />
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+	 crossorigin="anonymous">
 
-<input type="submit" value="Log In">
+	<!-- Bootstrap core CSS -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<a href="">Perdi mi contraseña</a><br>
-<a href="">Crear una cuenta</a>
-   </form>
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		body {
+			background: url("water.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+	</style>
+
+	<!-- Custom styles for this template -->
+	<link href="signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+	<main class="form-signin">
+		<form>
+			<img src="Tiburon.png" alt="" width="90" height="34" class="d-inline-block align-text-top">
+      <h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1>
+
+      <div class="form-floating">
+       <input type="inputuser" class="form-control" id="floatingInput" placeholder="name@example.com">
+       <label for="floatingInput">Correo</label>
+      </div>
+      <div class="form-floating">
+        <input type="inputpass" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
     </div>
-    <script src="script.js">
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Grupo 6</p>
+    </form>
+    
+  <script src="script.js">
     function comparar() {
 		//trayendo texto de input de username
 		var x = document.getElementById("inputuser").value;
@@ -93,5 +135,7 @@
 		xmlhttp.send();
 	}
     </script>
+  </main>
+    
   </body>
 </html>
